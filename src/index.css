@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 46 65% 94%; /* #F4EBD0 Cream */
+    --foreground: 120 36% 15%; /* #1a3a1b Dark Sage */
+    --primary: 29 65% 56%; /* #D68C45 Terracotta */
+    --primary-foreground: 46 65% 98%;
+    --secondary: 120 36% 27%; /* #2C5F2D Sage */
+    --secondary-foreground: 46 65% 98%;
+    --muted: 46 30% 88%;
+    --muted-foreground: 120 20% 35%;
+    --accent: 29 65% 56%;
+    --accent-foreground: 46 65% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 29 30% 80%;
+    --input: 29 30% 85%;
+    --ring: 29 65% 56%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 120 36% 10%;
+    --foreground: 46 65% 94%;
+    --primary: 29 65% 56%;
+    --primary-foreground: 46 65% 98%;
+    --secondary: 120 36% 27%;
+    --secondary-foreground: 46 65% 98%;
+    --muted: 120 30% 15%;
+    --muted-foreground: 46 20% 70%;
+    --accent: 29 65% 56%;
+    --accent-foreground: 46 65% 98%;
+    --border: 120 20% 20%;
+    --input: 120 20% 20%;
+    --ring: 29 65% 56%;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+@layer components {
+  .font-sketch {
+    font-family: 'Fredericka the Great', cursive;
+  }
+  .sketch-border {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: 2px solid currentColor;
+  }
+  .sketch-border-sm {
+    border-radius: 120px 10px 110px 10px/10px 110px 10px 120px;
+    border: 2px solid currentColor;
+  }
+}
